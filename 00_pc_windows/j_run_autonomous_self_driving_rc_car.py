@@ -76,7 +76,7 @@ class VideoStreamServer(threading.Thread):
                     jpg = stream_bytes[first:last + 2]
                     stream_bytes = stream_bytes[last + 2:]
                     # change jpg stream into image
-                    image = cv2.imdecode(np.frombuffer(jpg, dtype=np.uint8), cv2.IMREAD_COLOR)
+                    image = cv2.imdecode(np.frombuffer(jpg, dtype = np.uint8), cv2.IMREAD_COLOR)
                     #  save it into shared variable
                     VideoStreamServer.color = image[120:240, :]
                     VideoStreamServer.grayscale = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)

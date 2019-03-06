@@ -16,7 +16,7 @@ y = 240                                 # camera y-axis size
 fps = 30                                # camera frame per second
 
 # rangefinder distance soft limit       # rangefinder setting
-truncate = 50                          # limit distance to be measured by rangefinder to 1 [m]
+truncate = 50                          # limit distance to be measured by rangefinder to 0.5 [m]
 
 # controller override channel 1         # futaba controller raw input [left and right]
 left = 1154                             # channel 1 reading when rover steering turns left

@@ -63,8 +63,8 @@ class VideoStreamServer(threading.Thread):
 
                     jpg = stream_bytes[first:last + 2]
                     stream_bytes = stream_bytes[last + 2:]
-                    # turn jpg data into something understandable to opencv and crop it
-                    image = cv2.imdecode(np.frombuffer(jpg, dtype=np.uint8), cv2.IMREAD_COLOR)
+                    # turn jpg data into something understandable to opencv
+                    image = cv2.imdecode(np.frombuffer(jpg, dtype = np.uint8), cv2.IMREAD_COLOR)
                     # print time taken to prepare 1 image
                     print ("Frame take %.3f [s] to complete" % (time.time() - start))
                     # display the data stream as video

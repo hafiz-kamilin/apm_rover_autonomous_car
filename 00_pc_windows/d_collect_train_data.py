@@ -123,9 +123,9 @@ class SteerDataCollect(threading.Thread):
                     jpg = stream_bytes[first:last + 2]
                     stream_bytes = stream_bytes[last + 2:]
                     # 'image0' original image in color cropped to x = 320 and y = 120 for livestreaming
-                    image0 = cv2.imdecode(np.fromstring(jpg, dtype=np.uint8), cv2.IMREAD_COLOR)[120:240, :]
+                    image0 = cv2.imdecode(np.fromstring(jpg, dtype = np.uint8), cv2.IMREAD_COLOR)[120:240, :]
                     # 'image1' original image in color, full frame for training
-                    image1 = cv2.imdecode(np.fromstring(jpg, dtype=np.uint8), cv2.IMREAD_COLOR)
+                    image1 = cv2.imdecode(np.fromstring(jpg, dtype = np.uint8), cv2.IMREAD_COLOR)
                     # apply gaussian blurring to reduces noise
                     image2 = cv2.GaussianBlur(image1, (3, 3), 0)[120:240, :]
                     # compute the median of the single channel pixel intensities
